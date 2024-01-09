@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="50.528" tests="10" skipped="0" failures="0" errors="0">
+<testcase classname="Ensure search functionality is working correctly" name="Verify search is displayed on different pages" time="13.542">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I navigate to Contact Us page..........................................passed
+Then Search is displayed on every page screen...............................passed
+When I navigate to MyAccount Register.......................................passed
+When I navigate to MyAccount Login..........................................passed
+When I navigate to Wish List page...........................................passed
+When I navigate to Shopping Cart page.......................................passed
+When I navigate to Checkout page............................................passed
+When I navigate to Tablets category by clicking on first level menu.........passed
+When I navigate to Desktops Mac sub-category by clicking on second level menu.passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify search with text input" time="5.21">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I input the text "mac" in the search field.............................passed
+And I select search button..................................................passed
+Then I verify that result include items related to "mac"....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify search with numbers input" time="3.767">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I input numbers "300" in the search field..............................passed
+And I select search button..................................................passed
+Then I verify that result include items related to numbers "300"............passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify search field has blue line" time="3.645">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I input the text "a" in the search field with grey borders.............passed
+Then I verify that the borders of the field has bleu borders................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify search in product descriptions has result" time="4.254">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I select search icon when search field is empty........................passed
+And I select a checkbox: Search in product descriptions.....................passed
+And I input the text "phone" in the search criteria field...................passed
+And I select blue search button.............................................passed
+Then I verify that result include items related to "phone"..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify search in product descriptions has no result" time="3.529">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I select search icon when search field is empty........................passed
+And I select a checkbox: Search in product descriptions.....................passed
+And I input the text "aaaaa" in the search criteria field...................passed
+And I select blue search button.............................................passed
+Then I verify that correct message is displayed.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify search in product subcategories has result" time="3.875">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I select search icon when search field is empty........................passed
+And I input the text "tab" in the search criteria field.....................passed
+And I select "Tablets" category.............................................passed
+And I select a checkbox: Search in subcategories............................passed
+And I select blue search button.............................................passed
+Then I verify that result include items related to "tab"....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify search in product subcategories has no result" time="3.917">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I select search icon when search field is empty........................passed
+And I input the text "aaaaa" in the search criteria field...................passed
+And I select "Tablets" category.............................................passed
+And I select a checkbox: Search in subcategories............................passed
+And I select blue search button.............................................passed
+Then I verify that correct message is displayed.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify search in product subcategories and descriptions" time="4.217">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I select search icon when search field is empty........................passed
+And I input the text "mac" in the search criteria field.....................passed
+And I select "Laptops & Notebooks" category.................................passed
+And I select a checkbox: Search in subcategories............................passed
+And I select a checkbox: Search in product descriptions.....................passed
+And I select blue search button.............................................passed
+Then I verify that result include items related to "mac"....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure search functionality is working correctly" name="Verify that list of products after search have pagination" time="3.913">
+<system-out><![CDATA[
+Given Application is launched...............................................passed
+When I select search icon when search field is empty........................passed
+And I select a checkbox: Search in product descriptions.....................passed
+And I input the text "a" in the search criteria field.......................passed
+And I select blue search button.............................................passed
+Then I verify that list of products have pagination.........................passed
+]]></system-out>
+</testcase>
+</testsuite>
